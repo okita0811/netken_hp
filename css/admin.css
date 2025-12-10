@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* Common Styles */
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Messages */
+.msg {
+    color: green;
+    font-weight: bold;
+}
+
+.err {
+    color: red;
+    font-weight: bold;
+}
+
+/* Dashboard Menu (admin/index.php) */
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    margin-bottom: 10px;
+}
+
+.menu-list a {
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu-list a:hover {
+    background-color: #ddd;
+}
+
+/* Forms (admin/post_create.php, etc.) */
+.container {
+    width: 600px;
+    /* Note: overly specific fixed width might be an issue, but keeping as is for now to match original */
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+input[type="date"],
+input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    /* Added for better sizing */
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
