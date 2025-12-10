@@ -1,5 +1,5 @@
 <?php
-require 'inc/connect_db.php';
+require '../inc/connect_db.php';
 
 // 最新の活動記録を3件だけ取得 (LIMIT 3)
 $sql = "SELECT * FROM activity_logs ORDER BY post_date DESC LIMIT 3";
@@ -49,7 +49,7 @@ $latest_logs = $stmt->fetchAll();
                 <?php foreach ($latest_logs as $log): ?>
                     <div class="log-card">
                         <?php if ($log['image_path']): ?>
-                            <img src="<?php echo $log['image_path']; ?>" alt="活動画像" class="log-thumb">
+                            <img src="../<?php echo $log['image_path']; ?>" alt="活動画像" class="log-thumb">
                         <?php else: ?>
                             <div class="log-thumb" style="display:flex;align-items:center;justify-content:center;">No Image</div>
                         <?php endif; ?>

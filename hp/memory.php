@@ -1,5 +1,5 @@
 <?php
-require 'inc/connect_db.php';
+require '../inc/connect_db.php';
 
 // 全ての活動記録を新しい順に取得
 $sql = "SELECT * FROM activity_logs ORDER BY post_date DESC";
@@ -45,7 +45,7 @@ $logs = $stmt->fetchAll();
                     </div>
 
                     <?php if ($log['image_path']): ?>
-                        <img src="<?php echo $log['image_path']; ?>" alt="活動の様子" class="log-img">
+                        <img src="../<?php echo $log['image_path']; ?>" alt="活動の様子" class="log-img">
                     <?php endif; ?>
                 </div>
             <?php endforeach; ?>

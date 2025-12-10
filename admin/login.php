@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // ログイン成功ならセッションにIDを保存
         session_regenerate_id(true); // セキュリティ対策
         $_SESSION['admin_id'] = $admin['id'];
+        $_SESSION['admin_username'] = $admin['username'];
         header("Location: index.php"); // 管理画面へ移動
         exit;
     } elseif (empty($username) || empty($password)) {
